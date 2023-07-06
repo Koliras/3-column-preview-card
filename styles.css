@@ -1,0 +1,113 @@
+
+html {
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  height: fit-content;
+  width: 60%;
+  padding-top: 12vh;
+  margin: auto;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  color: hsla(0, 0%, 100%, 0.75);
+}
+
+p {
+  padding-bottom: 90px;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: hsl(0, 0%, 95%);
+  padding: 2vw 0;
+}
+
+/* #region cars */
+
+.car {
+  padding: 10%;
+  position: relative;
+}
+
+.sedan {
+  background-color: hsl(31, 77%, 52%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.suv {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* #endregion */
+
+/* #region learn */
+
+.learn {
+  position: absolute;
+  bottom: 20px;
+  background-color: hsl(0, 0%, 95%);
+  border: 2px solid hsl(0, 0%, 95%);
+  border-radius: 50px;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+  width: 50%;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.sedan > .learn {
+  color:hsl(31, 77%, 52%);
+}
+.suv > .learn {
+  color:hsl(184, 100%, 22%);
+}
+.luxury > .learn {
+  color: hsl(179, 100%, 13%);
+}
+
+.learn:hover {
+  background-color: inherit;
+  color: hsl(0, 0%, 95%);
+}
+
+/* #endregion */
+
+@media screen and (max-width: 376px) {
+  .container {
+    grid-template-columns: 1fr;
+    width: 80%;
+    padding-top: 0;
+  }
+
+  .sedan {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .luxury {
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .learn {
+    width: 60%;
+  }
+
+  p {
+    padding-bottom: 60px;
+  }
+
+}
